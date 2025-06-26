@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { createProduct, getProducts, deleteProduct } = require('../controllers/productController');
-const { verifyAdmin } = require('../middleware/auth');
+const { verifyAdmin } = require('../middlewares/authMiddleware');
 
 // create a new product
 router.post('/create', verifyAdmin, createProduct);

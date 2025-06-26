@@ -30,7 +30,7 @@ exports.login = async (req, res) => {
       { expiresIn: '3d' }
     );
 
-    res.status(200).json({ token });
+    res.status(200).json({ token, user });
   } catch (err) {
     res.status(500).json(err.message);
   }
